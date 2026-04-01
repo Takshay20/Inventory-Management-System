@@ -1,0 +1,224 @@
+﻿/* ===== RESET ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fc;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== LAYOUT ===== */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1f2937, #111827);
+    padding: 15px;
+}
+
+.main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 20px;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar h4 {
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar .nav-link {
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    color: #cbd5e1;
+    display: block;
+    text-decoration: none;
+}
+
+    .sidebar .nav-link:hover {
+        background: #374151;
+        color: white;
+    }
+
+    .sidebar .nav-link.active {
+        background: #2563eb;
+        color: white;
+    }
+
+/* ===== CARD ===== */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== DASHBOARD CARD ===== */
+.dashboard-card {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    color: white;
+}
+
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .dashboard-card h3 {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .dashboard-card .icon {
+        font-size: 30px;
+        opacity: 0.8;
+    }
+
+/* ===== CHART CARD ===== */
+.chart-card {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== TABLE ===== */
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .table thead {
+        background: #2563eb;
+        color: white;
+    }
+
+    .table tbody tr {
+        transition: 0.2s;
+    }
+
+        .table tbody tr:hover {
+            background: #f1f5f9;
+        }
+
+/* ===== BUTTON ===== */
+.btn {
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+.btn-sm {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* ===== BADGE ===== */
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
+/* ===== HEADINGS ===== */
+h2, h4, h5 {
+    font-weight: 600;
+}
+
+/* MODAL DESIGN */
+.modern-modal {
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* INPUT STYLE */
+.input-modern {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+    /* FOCUS EFFECT */
+    .input-modern:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+
+/* ERROR */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* BUTTON IMPROVE */
+.modal-footer .btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.modal.fade .modal-dialog {
+    transform: translateY(-20px);
+    transition: 0.3s;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+/* ERROR TEXT */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* SHAKE ANIMATION */
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.swal2-popup {
+    font-size: 14px !important;
+    border-radius: 10px !important;
+}

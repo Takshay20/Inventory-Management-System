@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Stock History";
+}
+
+<h3 class="mb-3 fw-bold">📜 Stock History</h3>
+
+<table class="table table-hover shadow-sm" id="historyTable">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Type</th>
+            <th>Quantity</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+
+            $.get('/Home/GetStockHistory', function (data) {
+
+                let html = '';
+
+                data.forEach(x => {
+
+                    let badge = x.type === 'IN'
+                        ? '<span class="badge bg-success">IN</span>'
+                        : '<span class="badge bg-danger">OUT</span>';
+
+                    html += `<tr>
+                        <td>${x.product}</td>
+                        <td>${badge}</td>
+                        <td>${x.qty}</td>
+                        <td>${x.date}</td>
+                    </tr>`;
+                });
+
+                $("#historyTable tbody").html(html);
+            });
+
+        });
+    </script>
+
+}

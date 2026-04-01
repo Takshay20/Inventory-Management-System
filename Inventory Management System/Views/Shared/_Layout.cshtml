@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Inventory_Management_System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/Inventory_Management_System.styles.css" asp-append-version="true" /> *@
+</head>
+<body>
+
+    <div class="d-flex">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar bg-dark text-white">
+            <h4 class="p-3">IMS</h4>
+
+            <ul class="nav flex-column px-2">
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Home" asp-action="Index">📊 Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Home" asp-action="StockHistory">📜 Stock History</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content flex-grow-1">
+
+            <!-- TOP NAVBAR -->
+            <div class="topbar d-flex justify-content-between align-items-center px-4 py-2 shadow-sm">
+                <h5 class="mb-0">Inventory Dashboard</h5>
+                <span>👤 Admin</span>
+            </div>
+
+            <!-- PAGE CONTENT -->
+            <div class="p-4">
+                @RenderBody()
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - Inventory_Management_System - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <audio id="successSound">
+        <source src="/sounds/success.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
